@@ -3,7 +3,7 @@ import smtplib
 
 '''
     Your movie watchlist here
-    The titles are in the format as would appear in the JustWatch page URL (JW)
+    The titles are in the format as would appear in the JustWatch (JW) page URL 
     e.g. For 'Joker' starring Joaquin Phoneix
     https://www.justwatch.com/uk/movie/joker-2019
 '''
