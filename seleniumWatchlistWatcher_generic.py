@@ -20,7 +20,7 @@ driver.get('https://www.justwatch.com/uk')
 time.sleep(3)
 
 #The following section was for navigating through various login pages but was made obselte after I linked my chrome account
-#Navidation was done through identifying CSS/XML paths or HTML ids. Honestly it's a little labourious.
+#Navigation was done through identifying CSS/XML paths or HTML ids. Honestly it's a little labourious.
 '''
 #Allow some time to load
 time.sleep(3)
