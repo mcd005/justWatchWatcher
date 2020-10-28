@@ -42,6 +42,8 @@ def generateID(title, content_type):
     # Generates the JustWatch ID for a TV series or movie
     site_url = 'https://apis.justwatch.com/content/urls?include_children=true&path=%2Fuk%2F' + content_type + '%2F' + title
     r1 = requests.get(site_url)
+    # TODO: r1 currently returns an null json. It looks like JW are possibly blocking scrapers.
+    # Needs a fix.
     r1_json = r1.json()
     print(r1_json)
     JWID = r1_json['object_id']
