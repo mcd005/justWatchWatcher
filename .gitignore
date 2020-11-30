@@ -1,3 +1,5 @@
 secret.py
 requestTest.py
 seleniumTest.py
+__pycache__
+.idea

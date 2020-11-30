@@ -97,6 +97,7 @@ def emailAlert(nowAvailable):
     password = secret.sender_pass
     message = 'Subject: There are films on your watchlist that are now available to stream! \n\n'
 
+    # TODO add crash diagnosis in email
     for item in nowAvailable:
         message = message + item.replace("-"," ").title() + "\n"
 
@@ -127,6 +128,7 @@ if (availableTitles):
 # r1 = requests.get("https://apis.justwatch.com/content/titles/movie/113248/locale/en_GB")
 # print(r1.content)
 
+# TODO add brief user guide in readme
 
 
 
