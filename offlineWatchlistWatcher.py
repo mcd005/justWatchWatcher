@@ -2,54 +2,9 @@ import requests
 import smtplib
 import secret
 
-movies = [
-    'rushmore',
-    'the-life-aquatic-with-steve-zissou',
-    'parasite',
-    'casablanca',
-    'the-lives-of-others',
-    'the-great-dictator',
-    'apocalypse-now',
-    'memento',
-    'they-shall-not-grow-old',
-    'eternal-sunshine-of-the-spotless-mind',
-    'there-will-be-blood',
-    'platoon',
-    'trainspotting',
-    'catch-me-if-you-can',
-    'doctor-zhivago-1965',
-    'mulholland-drive',
-    'gandhi',
-    'alphago',
-    'little-women-2019',
-    'gattaca',
-    'moonrise-kingdom',
-    'goldfinger',
-    'glengarry-glen-ross',
-    'the-thin-red-line',
-    'from-russia-with-love',
-    'submarine',
-    'goldeneye',
-    'dr-no',
-    'the-lobster',
-    'the-master-2012',
-    't2-trainspotting',
-    'the-road',
-    'the-spy-who-loved-me',
-    'bottle-rocket',
-    'primer',
-    'the-tree-of-life',
-    'live-and-let-die',
-    'the-living-daylights',
-    'on-her-majestys-secret-service',
-    'licence-to-kill',
-    'diamonds-are-forever',
-]
+movies = secret.movies_watchlist
 
-tv_series = [
-    'cosmos-a-personal-voyage',
-    'barry'
-]
+tv_series = secret.tv_watchlist
 
 '''
 ---Provider IDs---
@@ -124,9 +79,6 @@ checkList(movies, 'movie', availableTitles)
 checkList(tv_series, 'tv-series', availableTitles)
 if (availableTitles):
     emailAlert(availableTitles)
-
-# r1 = requests.get("https://apis.justwatch.com/content/titles/movie/113248/locale/en_GB")
-# print(r1.content)
 
 # TODO add brief user guide in readme
 
