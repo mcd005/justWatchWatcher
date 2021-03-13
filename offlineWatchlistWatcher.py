@@ -50,11 +50,12 @@ def emailAlert(nowAvailable):
     sndr_email = secret.sender_email
     rec_email = secret.receiver_email
     password = secret.sender_pass
-    message = 'Subject: There are films on your watchlist that are now available to stream! \n\n'
+    message = 'Subject: There are films on your watchlist that are now available to stream!\n\n'
 
     # TODO add crash diagnosis in email
+    message += "\n"
     for item in nowAvailable:
-        message = message + item.replace("-"," ").title() + "\n"
+        message += item.replace("-"," ").title() + "\n"
 
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
@@ -80,9 +81,9 @@ checkList(tv_series, 'tv-series', availableTitles)
 if (availableTitles):
     emailAlert(availableTitles)
 
-# TODO add brief user guide in readme
+# print(availableTitles)
 
-
+# TODO add brief user guide in readme or better yet an executable that will set up
 
 
 
