@@ -32,10 +32,12 @@ e.g For the UK
 41 ITV
 103 All4
 333 My5
+337 Disney+
+350 Apple TV+
 '''
 
 #Inlcude the ints that correspond to the providers you use
-my_providers = {8}
+my_providers = {8, 38}
 
 
 def generateID(title, content_type):

@@ -15,11 +15,13 @@ tv_series = secret.tv_watchlist
 41 ITV
 103 All4
 333 My5
+337 Disney+
+350 Apple TV+
 '''
 
-my_providers = {8, 9, 29, 38, 41, 103, 333}
+my_providers = {8, 9, 29, 38, 41, 103, 333, 337, 350}
 
-def generateID(title, content_type):
+def getID(title, content_type):
     # Generates the JustWatch ID for a TV series or movie
     site_url = 'https://apis.justwatch.com/content/urls?include_children=true&path=%2Fuk%2F' + content_type + '%2F' + title
     r1 = requests.get(site_url)
@@ -68,7 +70,7 @@ def emailAlert(nowAvailable):
 availableTitles = []
 def checkList(title_list, cont_type, availableTitles):
     for title in title_list:
-        id = generateID(title, cont_type)
+        id = getID(title, cont_type)
         prov = getProviders(id, 'show' if cont_type == 'tv-series' else cont_type)
 
         if (checkAvailability(prov)):
